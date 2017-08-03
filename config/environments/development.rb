@@ -74,4 +74,4 @@ Rails.application.configure do
 #        s3_region: 'ap-southeast-1'
 #      }
 #    }
-# end
+ end
