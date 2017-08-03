@@ -60,4 +60,5 @@ gem 'toastr-rails', '~> 1.0', '>= 1.0.3'
 gem 'omniauth', '~> 1.6', '>= 1.6.1'
 gem 'omniauth-facebook', '~> 4.0'
 gem 'paperclip', '~> 5.1'
+gem 'aws-sdk', '~> 2.10', '>= 2.10.21'
 
