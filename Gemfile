@@ -62,4 +62,5 @@ gem 'omniauth-facebook', '~> 4.0'
 gem 'paperclip', '~> 5.1'
 gem 'aws-sdk', '~> 2.10', '>= 2.10.21'
 gem 'geocoder', '~> 1.4', '>= 1.4.4'
+gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 
