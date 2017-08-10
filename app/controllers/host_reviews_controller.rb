@@ -1,6 +1,6 @@
 class HostReviewsController < ApplicationController
 
-	def create
+  def create
     # Step 1: Check if the reservation exist (room_id, guest_id, host_id)
 
     # Step 2: Check if the current host already reviewed the guest in this reservation.
@@ -33,17 +33,15 @@ class HostReviewsController < ApplicationController
     redirect_back(fallback_location: request.referer)
   end
 
+  def destroy
+    @host_review = Review.find(params[:id])
+    @host_review.destroy
 
-	def destroy
-		@host_review = Review.find(params[:id])
-		@host_review.destroy
+    redirect_back(fallback_location: request.referer, notice: "Removed...!")
+  end
 
-		redirect_back(fallback_location: request.referer, notice: "Removed...!")
-	end
-
-	private
-
-	def host_review_params
-		params.require(:host_review).permit(:comment, :star, :room_id, :reservation_id, :guest_id)
-	end
+  private
+    def host_review_params
+      params.require(:host_review).permit(:comment, :star, :room_id, :reservation_id, :guest_id)
+    end
 end
