@@ -39,4 +39,11 @@ Rails.application.routes.draw do
    get 'search', to: 'pages#search'
 
    get 'dashboard', to: 'dashboards#index'
+
+   resources :reservations, only: [:approve, :decline] do 
+      member do 
+        post '/approve' => "reservations#approve"
+        post '/decline' => "reservations#decline"
+      end
+    end
 end
