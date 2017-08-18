@@ -71,3 +71,5 @@ gem 'momentjs-rails', '~> 2.17', '>= 2.17.1'
 gem 'stripe', '~> 3.3'
 gem 'rails-assets-card', source: 'https://rails-assets.org'
 
+gem 'omniauth-stripe-connect', '~> 2.10'
+
