@@ -1,9 +1,7 @@
-App.notifications = App.cable.subscriptions.create "NotificationsChannel",
-  connected: ->
-    # Called when the subscription is ready for use on the server
-
-  disconnected: ->
-    # Called when the subscription has been terminated by the server
-
-  received: (data) ->
-    # Called when there's incoming data on the websocket for this channel
+$(() ->
+  App.notifications = App.cable.subscriptions.create {channel: "NotificationsChannel", id: $('#user_id').val() },
+    received: (data) ->
+      $('#num_of_unread').html(data.unread)
+      $('#notifications').prepend(data.message)
+      
+)
