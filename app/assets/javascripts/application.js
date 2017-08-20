@@ -19,4 +19,7 @@
 //= require fullcalendar
 //= require card
 
+//= require Chart.bundle
+//= require chartkick
+
 //= require_tree .

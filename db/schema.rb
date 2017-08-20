@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170818072856) do
+ActiveRecord::Schema.define(version: 20170819173225) do
 
   create_table "calendars", force: :cascade do |t|
     t.date "day"
@@ -88,6 +88,15 @@ ActiveRecord::Schema.define(version: 20170818072856) do
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
+  create_table "settings", force: :cascade do |t|
+    t.boolean "enable_sms", default: true
+    t.boolean "enable_email", default: true
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_settings_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -113,6 +122,7 @@ ActiveRecord::Schema.define(version: 20170818072856) do
     t.string "pin"
     t.boolean "phone_verified"
     t.string "stripe_id"
+    t.string "merchant_id"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

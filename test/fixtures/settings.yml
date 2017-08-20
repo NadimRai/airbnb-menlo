@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  enable_sms: false
+  enable_sms: false
+  user: one
+
+two:
+  enable_sms: false
+  enable_sms: false
+  user: two
