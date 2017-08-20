@@ -18,8 +18,8 @@
 //= require moment
 //= require fullcalendar
 //= require card
-
 //= require Chart.bundle
 //= require chartkick
-
+//= require cable
+//= require turbolinks
 //= require_tree .
